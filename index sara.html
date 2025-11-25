@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<style>
+    body {
+        background-color: #d5f7d4;
+        font-family: "Segoe UI", sans-serif;
+        color: #42939e;
+        margin: 0;
+    }
+
+    header {
+        background: linear-gradient(135deg, #0a0c33, #133a4d);
+        padding: 15px;
+        text-align: center;
+        color: white;
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+    }
+
+    nav a {
+        color: #352f47;
+        padding: 10px 20px;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    nav a text {
+        color: #0c062b;
+    }
+
+    .card-group {
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background-color: #ffffff;
+    }
+
+    .card-group text {
+        transform: translateY(-6px);
+    }
+
+    .card-group img {
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      height: 250px;
+      object-fit: cover;
+        width: 100%;
+        border-radius: 12px;
+    }
+
+    .carosuel  {
+        background-color: #4caf91;
+        border: none;
+        color: white;
+        padding: 10px 16px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.25s ease;
+    }
+
+    .carosuel:hover {
+        background-color: #59a881;
+    }
+
+    footer {
+        margin-top: 40px;
+        background-color: #cceee1;
+        padding: 20px;
+        text-align: center;
+        font-size: 0.9rem;
+        color: #2a6181;
+    }
+</style>
+
+  </head>
+<body>
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="#">Productos</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Ayuda</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Nosotros</a>
+  </li>
+</ul>
+
+<section>
+  <nav class="navbar bg-light px-3 shadow-sm rounded-bottom-3">
+    <div class="container-fluid justify-content-center">
+      <form class="d-flex w-100" role="search" style="max-width: 600px;">
+        <input class="form-control me-2" type="search" placeholder="Buscar productos ecológicos" aria-label="Search" />
+        <button class="btn btn-success" type="submit">Buscar</button>
+      </form>
+    </div>
+  </nav>
+</section>
+<section class="my-4">
+  <div class="row row-cols-1 row-cols-md-3 g-4 gap-3">
+
+    <!-- Mini purificadora -->
+    <div class="card shadow-sm border-success-subtle rounded-4">
+      <img src="uni.JPG" class="card-img-top rounded-top-4" alt="Mini purificadora ecológica">
+      <div class="card-body">
+        <h5 class="card-title text-success fw-semibold">Mini purificadora</h5>
+        <p class="card-text">Nuestra innovación más compacta y ecológica. Ideal para oficinas y hogares. Actualmente con 20% de descuento y si te registras ahora obtienes promoción 2x1.</p>
+        <button class="btn btn-success rounded-pill fw-semibold">Comprar</button>
+      </div>
+    </div>
+
+    <!-- Garrafones ecológicos -->
+    <div class="card shadow-sm border-success-subtle rounded-4">
+      <img src="garrafon.JPG" class="card-img-top rounded-top-4" alt="Garrafones reutilizables eco">
+      <div class="card-body">
+        <h5 class="card-title text-success fw-semibold">Garrafones reutilizables ecológicos</h5>
+        <p class="card-text">Diseñados para almacenar agua purificada sin generar residuos. Reusables cientos de veces y perfectos para reducir impacto ambiental. 15% de descuento disponible.</p>
+        <button class="btn btn-success rounded-pill fw-semibold">Comprar</button>
+      </div>
+    </div>
+
+    <!-- BioBottle -->
+    <div class="card shadow-sm border-success-subtle rounded-4">
+      <img src="bote.AVIF" class="card-img-top rounded-top-4" alt="Botella ecológica BioBottle">
+      <div class="card-body">
+        <h5 class="card-title text-success fw-semibold">BioBottle</h5>
+        <p class="card-text">Botellas ecológicas reutilizables. Pequeñas de 250 a 500 ml, medianas de 600 ml a 1 L y grandes de 1.5 a 2 L. Paquete de botellas pequeñas desde $134.44.</p>
+        <button class="btn btn-success rounded-pill fw-semibold">Comprar</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="my-4">
+  <div id="carouselEco" class="carousel slide carousel-fade shadow rounded-4 overflow-hidden">
+
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselEco" data-bs-slide-to="0" class="active" aria-current="true"></button>
+      <button type="button" data-bs-target="#carouselEco" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#carouselEco" data-bs-slide-to="2"></button>
+    </div>
+
+    <div class="carousel-inner">
+
+      <div class="carousel-item active">
+        <img src="Sand.AVIF" class="d-block w-100" alt="Purificadora pequeña">
+        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-3">
+          <h5 class="fw-bold">Purificadora pequeña</h5>
+          <p>Ancho 2 a 3 m, fondo 2 a 3 m, altura 2.2 a 2.5 m. Ideal para venta de garrafones.</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="lama.JPG" class="d-block w-100" alt="Purificadora mediana">
+        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-3">
+          <h5 class="fw-bold">Purificadora mediana</h5>
+          <p>Ancho 4 a 5 m, fondo 4 a 6 m, altura 2.5 a 3 m. Incluye tanque de almacenamiento.</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="FILTRO.JPG" class="d-block w-100" alt="Purificadora grande">
+        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3 p-3">
+          <h5 class="fw-bold">Purificadora grande</h5>
+          <p>Requiere espacio amplio: ancho 8 a 12 m, fondo 10 a 15 m, altura 3 a 4 m. Incluye depósitos grandes de 5,000 a 10,000 litros.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselEco" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselEco" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+
+  </div>
+  </section>
+<section class="text-center my-4">
+  <div class="alert alert-success fw-semibold rounded-3">
+    ¿Quieres comprar tu purificadora ecológica? ¡Regístrate! 💧
+  </div>
+
+  <div class="alert alert-success rounded-3" style="--bs-border-opacity: .5;">
+    ¡Descuentos de hasta 50% por lanzamiento!
+  </div>
+
+  <div class="form-floating mb-3 w-75 mx-auto">
+    <input type="email" class="form-control rounded-3" id="floatingInputEco" placeholder="correo@example.com">
+    <label for="floatingInputEco">Correo electrónico</label>
+  </div>
+
+  <div class="form-floating w-75 mx-auto mb-4">
+    <input type="password" class="form-control rounded-3" id="floatingPasswordEco" placeholder="Contraseña">
+    <label for="floatingPasswordEco">Contraseña</label>
+  </div>
+</section>
+
+<footer class="text-center py-4 bg-light rounded-top-4">
+  <div class="form-floating w-75 mx-auto mb-3">
+    <textarea class="form-control rounded-3" placeholder="Escribe aquí tu opinión" id="floatingComentarioEco" style="height: 120px"></textarea>
+    <label for="floatingComentarioEco">¿Te gustaron nuestros productos ecológicos?</label>
+  </div>
+
+  <button type="button" class="btn btn-success px-4 py-2 rounded-pill fw-semibold">
+    Enviar
+  </button>
+</footer>
+</body> 
+</html>
